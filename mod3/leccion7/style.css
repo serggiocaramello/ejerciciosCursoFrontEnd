@@ -1,0 +1,67 @@
+body {
+  font-family: sans-serif;
+  background-color: #1b1b38;
+  color: #fff;
+}
+.main__container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.plane__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 300px;
+}
+
+.plane {
+  position: absolute;
+  width: 200px;
+  height: auto;
+  top: 20%;
+}
+
+.buttons__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.movement__buttons {
+  display: grid;
+  grid-template-areas: ". up  ." "left down right";
+  grid-template-columns: 5em 5em 5em;
+  grid-template-rows: auto;
+  justify-content: center;
+  gap: 0.5em;
+}
+
+.fa-arrow-up {
+  grid-area: up;
+}
+.fa-arrow-left {
+  grid-area: left;
+}
+.fa-arrow-down {
+  grid-area: down;
+}
+.fa-arrow-right {
+  grid-area: right;
+}
+
+.size__buttons,
+.visibility__buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.credits {
+  color: #fff;
+}
+.credits:hover {
+  color: rgb(175, 175, 175);
+}
