@@ -54,17 +54,10 @@ $(document).ready(function () {
       el.slideDown();
     }
     effect(btn, func, el) {
-      if (arguments.length < 3) {
-        btn.on("click", function ($e) {
-          $e.preventDefault();
-          func();
-        });
-      } else {
-        btn.on("click", function ($e) {
-          $e.preventDefault();
-          func(el);
-        });
-      }
+      btn.on("click", function ($e) {
+        $e.preventDefault();
+        el ? func(el) : func();
+      });
     }
   }
 
