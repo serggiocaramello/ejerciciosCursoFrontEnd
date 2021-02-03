@@ -1,0 +1,68 @@
+:root {
+  --border-color: #000;
+  --text-color: #000;
+  --text-color-header: #fff;
+  --primary-color: rgb(21, 96, 194);
+  --secondary-color: rgb(85, 100, 122);
+  --color-red: #f00;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  margin-top: 3em;
+}
+
+.container {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.effect {
+  border: 1px solid var(--border-color);
+  margin-bottom: 3em;
+}
+
+.effect__header {
+  background-color: var(--primary-color);
+  margin: 0;
+  text-align: center;
+  color: var(--text-color-header);
+  padding: 0.5em;
+}
+
+.effect__body {
+  text-align: center;
+  padding: 1em 2em;
+  line-height: 1.4em;
+}
+
+.effect__button:link {
+  display: block;
+  width: max-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0.75em;
+
+  text-decoration: inherit;
+  color: var(--text-color-header);
+  background-color: var(--secondary-color);
+  padding: 0.5em 0.75em;
+}
+
+.effect__button:visited {
+  text-decoration: inherit;
+  color: var(--text-color-header);
+}
+
+.color-red {
+  color: var(--color-red);
+}
+
+#focusInput:focus {
+  border: 2px solid var(--color-red);
+}
