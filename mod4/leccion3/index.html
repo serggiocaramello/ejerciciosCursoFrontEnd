@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejemplos Cuestionario M4L3</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div class="ejemplo-v-bind">
+        <h2>Ejemplo v-bind</h2>
+        <p v-bind:style="styleVBind">
+          Este texto cambio de color gracias a v-bind
+        </p>
+      </div>
+      <div class="ejemplo-v-show">
+        <h2>Ejemplo v-show</h2>
+        <p v-show="meMuestro">
+          Sólo me muestro si la propiedad meMuestro es = true
+        </p>
+      </div>
+      <div class="ejemplo-v-for">
+        <h2>Ejemplo v-for</h2>
+        <p>Se imprime un li por cada elemento dentro del array partesPC</p>
+        <ul>
+          <li v-for="parte in partesPC">{{parte}}</li>
+        </ul>
+      </div>
+      <div class="ejemplo-v-on">
+        <h2>Ejemplo v-on</h2>
+        <p>
+          Al presionar el boton, se ejecuta el evento click, gracias a la
+          directiva v-on.
+        </p>
+        <button v-on:click="mandarAlerta">
+          Presioname y aparecerea un alert
+        </button>
+      </div>
+      <div class="ejemplo-v-if">
+        <h2>Ejemplo v-if y v-else</h2>
+        <p v-if="numero>=5">
+          Me muestro porque la variable numero es mayor o igual a 5
+        </p>
+        <p v-else="numero>=5">
+          Me muestro porque la variable numero no es mayor o igual a 5
+        </p>
+      </div>
+      <div class="ejemplo-vue-model">
+        <h2>Ejemplo vue-model</h2>
+        <input type="text" v-model="textoInput" />
+        <p>{{textoInput}}</p>
+      </div>
+      <div class="ejemplo-vue-pre">
+        <h2>Ejemplo vue-pre</h2>
+        <p>No se interpolará la variable nombre</p>
+        <div v-pre>{{nombre}}</div>
+      </div>
+      <div class="ejemplo-vue-cloak">
+        <h2>Ejemplo vue-cloak</h2>
+        <p>El texto de abajo sólo se muestra cuando termina la compilacion</p>
+        <p v-cloak>{{nombre}}</p>
+      </div>
+      <div class="ejemplo-v-once">
+        <h2>Ejemplo de vue-once</h2>
+        <p>
+          El texto de abajo no se actualizará aunque la variable cafe cambie de
+          valor
+        </p>
+        <p v-once>{{cafe}}</p>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
