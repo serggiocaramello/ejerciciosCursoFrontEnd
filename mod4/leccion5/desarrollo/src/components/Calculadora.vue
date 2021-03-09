@@ -59,15 +59,15 @@ export default {
             break;
           case "-":
             this.theVariables.result =
-              this.theVariables.firstNum + this.theVariables.secondNum;
+              this.theVariables.firstNum - this.theVariables.secondNum;
             break;
           case "*":
             this.theVariables.result =
-              this.theVariables.firstNum + this.theVariables.secondNum;
+              this.theVariables.firstNum * this.theVariables.secondNum;
             break;
           case "/":
             this.theVariables.result =
-              this.theVariables.firstNum + this.theVariables.secondNum;
+              this.theVariables.firstNum / this.theVariables.secondNum;
             break;
           default:
             break;
