@@ -35,7 +35,7 @@ export default {
   },
   computed: {
     verifyName() {
-      return this.newUser.length > 0;
+      return this.newUser.name.length > 0;
     },
     verifyEmail() {
       const emailRegExp = /^[\w-.]+@([\w-]+.)+[\w-]{2,4}$/;
